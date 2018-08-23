@@ -12,8 +12,14 @@ class TV
 	{
 		if(on == true)
 		{
+			if(channel < 200){
 			this.channel = channel;
 			System.out.println("Channel: "+channel);
+			}
+			else
+			{
+				System.out.println("Channel out of range!");
+			}
 		}
 		else
 		{
@@ -25,8 +31,14 @@ class TV
 	{
 		if(on == true)
 		{
-			this.volume = volume;
-			System.out.println("Channel: "+volume);
+			if(volume < 50){
+				this.volume = volume;
+				System.out.println("Channel: "+volume);
+			}
+			else
+			{
+				System.out.println("Volume out of range!");	
+			}
 		}
 		else
 		{
@@ -38,8 +50,14 @@ class TV
 	{
 		if(on == true)
 		{
-			channel++;
-			System.out.println("Channel: "+channel);	
+			if(channel < 200){
+				channel++;
+				System.out.println("Channel: "+channel);	
+			}
+			else
+			{
+				System.out.println("Channel out of range!");
+			}
 		}
 		else
 		{
@@ -51,8 +69,52 @@ class TV
 	{
 		if(on == true)
 		{
-			volume++;
-			System.out.println("Channel: "+volume);
+			if(volume < 50){
+				volume++;
+				System.out.println("Channel: "+volume);
+			}
+			else
+			{
+				System.out.println("Volume out of range!");		
+			}
+		}
+		else
+		{
+			System.out.println("TV is off, please turn it on to continue!");
+		}
+	}
+
+	void volumeDown()
+	{
+		if(on == true)
+		{
+			if(volume > 0){
+				volume--;
+				System.out.println("Channel: "+volume);
+			}
+			else
+			{
+				System.out.println("Volume out of range!");		
+			}
+		}
+		else
+		{
+			System.out.println("TV is off, please turn it on to continue!");
+		}
+	}
+
+	void channelDown()
+	{
+		if(on == true)
+		{
+			if(channel > 0){
+				channel--;
+				System.out.println("Channel: "+channel);	
+			}
+			else
+			{
+				System.out.println("Channel out of range!");
+			}
 		}
 		else
 		{
@@ -67,7 +129,7 @@ class TVDemo
 		TV tv = new TV();
 		tv.setChannel(108);
 		tv.switchTV();
-		tv.setVolume(20);
+		tv.setVolume(200);
 		tv.setChannel(108);
 		tv.channelUp();
 	}
