@@ -71,7 +71,7 @@ public class labset2
 			}
 			student[i].setMarks(marks);
 		}
-		System.out.println("USN: "+"\t"+"Name: "+"\t"+"Age: "+"\t"+"Branch: "+"\t"+"Sem: "+"\t"+"Avg: ");
+		System.out.println("USN: "+"\t\t"+"Name: "+"\t"+"Age: "+"\t"+"Branch: "+"\t"+"Sem: "+"\t"+"Avg: ");
 		for(int i=0; i<count; i++)
 		{
 			System.out.println(student[i]);
